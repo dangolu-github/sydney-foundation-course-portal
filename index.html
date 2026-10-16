@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
   <title>Sydney Foundation Course Portal</title>
   <style>
     :root{--ink:#182732;--muted:#64717a;--paper:#f3f1ec;--card:#fff;--line:#d7dbdc;--navy:#173a59;--blue:#1769aa;--orange:#a74818;--green:#17603d;--shadow:0 18px 50px rgba(22,36,45,.12)}
     *{box-sizing:border-box}html{background:var(--paper);color:var(--ink)}body{margin:0;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}.shell{width:min(1120px,calc(100% - 32px));margin:auto;padding:54px 0 72px}.hero{padding:24px 0 34px;border-bottom:1px solid var(--line)}.kicker{color:var(--orange);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.hero h1{margin:8px 0 10px;font-size:clamp(36px,7vw,64px);line-height:1;letter-spacing:-.05em;color:var(--navy)}.hero p{max-width:680px;margin:0;color:var(--muted);font-size:18px}.resources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.card{display:flex;min-height:220px;flex-direction:column;justify-content:space-between;padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow);color:inherit;text-decoration:none;transition:transform .16s,border-color .16s,box-shadow .16s}.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:#9db0bb;box-shadow:0 22px 55px rgba(22,36,45,.17);outline:3px solid rgba(23,105,170,.18);outline-offset:3px}.number{display:grid;width:38px;height:38px;place-items:center;border-radius:50%;background:#eef3f7;color:var(--navy);font-size:13px;font-weight:900}.card h2{margin:26px 0 7px;color:var(--navy);font-size:28px;letter-spacing:-.035em;line-height:1.1}.card p{margin:0;color:var(--muted);font-size:14px}.enter{display:flex;align-items:center;justify-content:space-between;margin-top:22px;color:var(--blue);font-weight:900}.enter span:last-child{font-size:23px}.main{border-top:5px solid var(--navy)}.noise{border-top:5px solid #6b4a8f}.extra{border-top:5px solid var(--green)}.sets{border-top:5px solid var(--blue)}.library{border-top:5px solid var(--orange)}footer{margin-top:30px;color:var(--muted);font-size:12px}@media(max-width:700px){.shell{padding-top:28px}.resources{grid-template-columns:1fr}.card{min-height:190px}.hero h1{font-size:42px}}@media print{body{background:#fff}.shell{width:auto;padding:0}.card{box-shadow:none;break-inside:avoid}}
+    .section-tools{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 14px}.section-tools button{font:inherit;font-weight:800;border:1px solid #9fb0bb;background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}.section-tools button:hover{background:#eef3f7}.section-tools button:focus-visible{outline:3px solid rgba(23,105,170,.35);outline-offset:2px}.panel{margin-bottom:14px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow);overflow:hidden}.panel>summary{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;justify-content:space-between;padding:18px 20px;cursor:pointer;list-style:none}.panel>summary::-webkit-details-marker{display:none}.panel>summary:focus-visible{outline:3px solid rgba(23,105,170,.35);outline-offset:-3px}.panel-title{color:var(--navy);font-size:21px;font-weight:900;letter-spacing:-.02em}.panel-title::before{content:"\25B8 ";color:var(--blue)}.panel[open]>summary .panel-title::before{content:"\25BE "}.panel-hint{color:var(--muted);font-size:13px}.panel-body{padding:2px 20px 20px}.panel-body .resources{margin-top:4px}.rows{list-style:none;margin:0;padding:0;display:grid;gap:10px}.rowlink{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;justify-content:space-between;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fbfcfd;color:inherit;text-decoration:none}.rowlink:hover,.rowlink:focus-visible{border-color:#9db0bb;background:#f2f7fb;outline:3px solid rgba(23,105,170,.16);outline-offset:2px}.rowlink .name{font-size:17px;font-weight:800;color:var(--navy)}.rowlink .meta{color:var(--muted);font-size:13px}.rowlink .go{color:var(--blue);font-weight:900}.empty{margin:0;padding:14px 16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:14px}@media(max-width:560px){.panel>summary{padding:15px}.panel-body{padding:2px 15px 16px}.panel-title{font-size:19px}.rowlink{padding:12px 13px}.rowlink .go{display:none}}@media print{.section-tools{display:none!important}.panel{box-shadow:none;break-inside:avoid}}
   </style>
 </head>
 <body>
@@ -15,16 +17,62 @@
     <header class="hero">
       <div class="kicker">Academic English</div>
       <h1>Sydney Foundation Course Portal</h1>
-      <p>Choose a listening set.</p>
+      <p>Class reviews, and the listening practice library.</p>
     </header>
-    <nav class="resources" aria-label="Listening sets">
+    <div class="sections">
+      <div class="section-tools"><button type="button" id="sf02ToggleAll" aria-pressed="false">Open all</button></div>
+      <details class="panel" data-sf02-panel="class-reviews">
+        <summary><span class="panel-title">Class reviews</span><span class="panel-hint">Dated class pages · each opens from its own private link</span></summary>
+        <div class="panel-body">
+<!-- sf02-class-nav:start -->
+        <ul class="rows">
+          <li><a class="rowlink" href="classes/2026-10-16/"><span class="name">16 October 2026</span><span class="meta">Listening precision · Task 1 review</span><span class="go" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+<!-- sf02-class-nav:end -->
+        </div>
+      </details>
+      <details class="panel" data-sf02-panel="practice-library">
+        <summary><span class="panel-title">Practice library</span><span class="panel-hint">Five listening routes</span></summary>
+        <div class="panel-body">
+          <nav class="resources" aria-label="Listening sets">
       <a class="card main" href="listening-practice/"><span class="number">01</span><div><h2>Listening Practice</h2><p>Five lecture topics with 60 question groups and full transcripts · for class review</p></div><div class="enter"><span>Open Listening Practice</span><span aria-hidden="true">→</span></div></a>
       <a class="card noise" href="noise-health/"><span class="number">02</span><div><h2>Noise and Health</h2><p>One talk with 15 questions and the full script · for class review</p></div><div class="enter"><span>Open Noise and Health</span><span aria-hidden="true">→</span></div></a>
       <a class="card extra" href="extra-listening-practice/"><span class="number">03</span><div><h2>Extra Listening Practice</h2><p>Three short reports with 25 questions · hand in when finished</p></div><div class="enter"><span>Open Extra Listening Practice</span><span aria-hidden="true">→</span></div></a>
       <a class="card sets" href="extra-listening-practice/mock-practice/"><span class="number">04</span><div><h2>Listening Practice Sets</h2><p>Six practice sets with 48 question groups · hand in one set at a time</p></div><div class="enter"><span>Open Listening Practice Sets</span><span aria-hidden="true">→</span></div></a>
       <a class="card library" href="extra-listening-practice/topic-library/"><span class="number">05</span><div><h2>Topic Listening Library</h2><p>Ten recordings with full scripts · listening practice, no questions</p></div><div class="enter"><span>Open Topic Listening Library</span><span aria-hidden="true">→</span></div></a>
-    </nav>
+          </nav>
+        </div>
+      </details>
+    </div>
     <footer>Academic English listening practice. Sections 03, 04 and 05 use audio and transcripts credited to <a href="https://learningenglish.voanews.com/" target="_blank" rel="noopener">VOA Learning English</a>, reused under its <a href="https://learningenglish.voanews.com/p/6861.html" target="_blank" rel="noopener">public-domain content policy</a>, with practice questions written for this course. Section 01 uses the course listening booklet and its recordings; section 02 uses a TED talk and its published transcript. Each section names its own source.</footer>
   </main>
+  <script>
+(function(){
+var KEY="sf02-home-sections-v1";
+var panels=Array.prototype.slice.call(document.querySelectorAll('details[data-sf02-panel]'));
+if(!panels.length)return;
+var saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){saved={}}
+var printing=false;
+function save(){if(printing)return;try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}}
+panels.forEach(function(d){
+  var name=d.getAttribute('data-sf02-panel');
+  d.open=saved[name]===true;
+  d.addEventListener('toggle',function(){saved[name]=d.open;save();sync()});
+});
+var all=document.getElementById('sf02ToggleAll');
+function sync(){if(!all)return;var open=panels.every(function(d){return d.open});
+  all.textContent=open?'Close all':'Open all';all.setAttribute('aria-pressed',String(open))}
+if(all)all.addEventListener('click',function(){
+  var open=panels.every(function(d){return d.open});
+  panels.forEach(function(d){d.open=!open});
+});
+sync();
+var before=[];
+addEventListener('beforeprint',function(){printing=true;
+  before=panels.map(function(d){return d.open});panels.forEach(function(d){d.open=true})});
+addEventListener('afterprint',function(){panels.forEach(function(d,i){d.open=before[i]});
+  printing=false;sync()});
+})();
+  </script>
 </body>
 </html>
