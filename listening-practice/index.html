@@ -38,6 +38,9 @@ textarea.scratch.answer{min-height:96px;border-color:#174f88}
 /* Annotations off: the highlight styling goes, the highlighted words stay exactly where they were. */
 .annotations-off .hint-mark{background:none!important;color:inherit!important;box-shadow:none!important;
   border-bottom:0!important;padding:0!important;font-weight:inherit!important}
+/* The teaching-hint block carries display:grid/display:flex of its own, which outranks the browser's
+   [hidden] rule, so setting hidden alone left the cards on screen. */
+.annotations-off #methods,.annotations-off #methodsHead{display:none!important}
 /* With the script hidden the questions take the full width. */
 .script-hidden .workspace{grid-template-columns:1fr}
 .script-hidden .script-box{display:none}
